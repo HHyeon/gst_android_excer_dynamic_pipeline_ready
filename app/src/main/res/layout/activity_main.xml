@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <SurfaceView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/surfaceview"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="play"
+                android:layout_weight="1"
+                android:id="@+id/btn_set_state_play"
+                android:onClick="OnBtnClick"
+                />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="stop"
+                android:layout_weight="1"
+                android:id="@+id/btn_set_state_stop"
+                android:onClick="OnBtnClick"
+                />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="action1"
+                android:layout_weight="1"
+                android:id="@+id/btn_action1"
+                android:onClick="OnBtnClick"
+                />
+            <ToggleButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textOn="wifip2p_1"
+                android:textOff="wifip2p_0"
+                android:layout_weight="1"
+                android:id="@+id/tglbtn_action2"
+                android:onClick="OnBtnClick"
+                />
+
+        </LinearLayout>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:id="@+id/edit_gstpipeline"
+            android:inputType="text"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:padding="1dp"
+            android:maxLines="3"
+            android:hint="gstpipeline"/>
+
+    </LinearLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
